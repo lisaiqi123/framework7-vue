@@ -9,43 +9,54 @@
       <p>孙国峰</p>
       <p class="fl-row-center"><i class="icon icon-weizhi"></i>方太居然之家北四环店家北四环店</p>
       <div class="box pa fl-row-around">
-          <a href="javascript:;" class="external fl-column-center"><span>1.5w</span><span>粉丝</span></a>
-          <a href="javascript:;" class="external fl-column-center"><span>8</span><span>订单</span></a>
-          <a href="javascript:;" class="external fl-column-center"><span>8888</span><span>合伙人</span></a>
+          <router-link to="fans" @click.native="change(1,true)" class="external fl-column-center"><span>1.5w</span><span>粉丝</span></router-link>
+          <router-link to="order" @click.native="change(2,true)" class="external fl-column-center"><span>8</span><span>订单</span></router-link>
+          <router-link to="fans" @click.native="change(1,true)" class="external fl-column-center"><span>8888</span><span>合伙人</span></router-link>
       </div>
-      <a href="javascript:;" class="external pa"><i class="icon icon-erweima1"></i></a>
+      <router-link to="erweima" @click.native="change(-1,false)"  class="external pa"><i class="icon icon-erweima1"></i></router-link>
     </div>
     <div class="list-items G-mt-73">
-      <a href="javascript:;" class="external fl-row-justy">
+      <router-link to="order" @click.native="change(2,true)" class="external fl-row-justy">
           <p class="fl-row-center"><span></span>订单管理</p><i class="icon icon-xiangyou"></i>
-      </a>
-      <a href="javascript:;" class="external fl-row-justy">
+      </router-link>
+      <router-link to="order" class="external fl-row-justy">
           <p class="fl-row-center"><span></span>商品管理</p><i class="icon icon-xiangyou"></i>
-      </a>
-      <a href="javascript:;" class="external fl-row-justy">
+      </router-link>
+      <router-link to="order" class="external fl-row-justy">
           <p class="fl-row-center"><span></span>经营数据</p><i class="icon icon-xiangyou"></i>
-      </a>
-      <a href="javascript:;" class="external fl-row-justy">
+      </router-link>
+      <router-link to="order" class="external fl-row-justy">
           <p class="fl-row-center"><span></span>评价管理</p><i class="icon icon-xiangyou"></i>
-      </a>
-      <a href="javascript:;" class="external fl-row-justy">
+      </router-link>
+      <router-link to="order" class="external fl-row-justy">
           <p class="fl-row-center"><span></span>辅助功能</p><i class="icon icon-xiangyou"></i>
-      </a>
-      <a href="javascript:;" class="external fl-row-justy">
+      </router-link>
+      <router-link to="order" @click.native="change(-1,false)" class="external fl-row-justy">
           <p class="fl-row-center"><span></span>添加合伙人</p><i class="icon icon-xiangyou"></i>
-      </a>
+      </router-link>
     </div>
 </div>
 </template>
 
 <script>
 export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      
+    name: 'HelloWorld',
+    data(){
+        return{
+            
+        }
+
+    },
+    // computed:{
+    //     menuIndex(){
+    //         return this.$store.commit({type:"menuActive",index:0,bol:true})
+    //     },
+    // },
+    methods:{
+        change(index,bol){
+            this.$store.commit({type:"menuActive",index:index,bol:bol})
+        }
     }
-  }
 }
 </script>
 

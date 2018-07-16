@@ -675,6 +675,11 @@ button[disabled] {
     height: .44rem;
 }
 
+.navbar {
+    top: 0;
+    height: .44rem;
+}
+
 .tabbar a.active {
     color: #f37831 !important;
 }
