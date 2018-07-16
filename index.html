@@ -1,12 +1,33 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>my-project</title>
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_459702_eqwdb6qjo9m.css">
+</head>
+<script>
+    var Width = window.innerWidth;
+    if (Width > 750) {
+        document.documentElement.style.fontSize = 192 + 'px';
+    } else {
+        document.documentElement.style.fontSize = ((Width / 375) * 100) + 'px';
+    }
+    window.onresize = function() {
+        var changeWidth = window.innerWidth;
+        if (changeWidth > 750) {
+            document.documentElement.style.fontSize = 192 + 'px';
+        } else {
+            document.documentElement.style.fontSize = ((changeWidth / 375) * 100) + 'px';
+        }
+    };
+</script>
+
+<body>
     <div id="app"></div>
     <!-- built files will be auto injected -->
-  </body>
+</body>
+<script src="https://at.alicdn.com/t/font_459702_yl1r6c8yaj.js"></script>
+
 </html>

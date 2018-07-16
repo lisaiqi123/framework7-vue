@@ -4,8 +4,12 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import Framework7 from 'framework7'
-import 'framework7/js/framework7'
-import 'framework7/css/framework7.ios.min.css'
+import 'framework7/js/framework7.min.js'
+// import './assets/css/framework7.ios.min.css'
+// import './assets/css/framework7.ios.colors.min.css'
+import './assets/css/reset.css'
+import './assets/css/flex.css'
+import './assets/css/index.css'
 
 Vue.config.productionTip = false
 
